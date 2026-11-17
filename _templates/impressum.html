@@ -1,0 +1,125 @@
+<!DOCTYPE html><html lang="de"><head>
+{{> head}}
+</head>
+<body>
+<div class="page">
+{{> header}}
+<main id="main" class="legal">
+
+    <!-- Page header -->
+    <section class="bg-gray-50 py-14 border-b border-gray-100">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <p class="text-xs font-bold tracking-widest text-brand uppercase mb-3"><span data-lang="de">Rechtliches</span><span data-lang="en">Legal</span></p>
+            <h1 class="text-3xl md:text-4xl font-black text-gray-900"><span data-lang="de">Impressum</span><span data-lang="en">Legal Notice (Impressum)</span></h1>
+
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <div class="privacy-content">
+
+                <!-- ================= DEUTSCH ================= -->
+                <div data-lang="de">
+
+                <div class="section-block">
+                    <h2>Angaben gemäß § 5 DDG</h2>
+                    <p><strong>Click-Capybara</strong><br>
+                    Inhaber: {{legal.name}}<br>
+                    {{legal.street}}<br>
+                    {{legal.zip_city}}</p>
+                </div>
+
+                <div class="section-block">
+                    <h2>Kontakt</h2>
+                    <p>E-Mail: <a href="mailto:hello@click-capybara.com">hello@click-capybara.com</a><br>
+                    <span data-if="phone">Telefon: {{legal.phone}}<br></span>
+                    Kontaktformular: <a href="/#contact">click-capybara.com/#contact</a></p>
+                </div>
+
+                <div class="section-block" data-if="vat_id">
+                    <h2>Umsatzsteuer-ID</h2>
+                    <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: {{legal.vat_id}}</p>
+                </div>
+
+                <div class="section-block" data-if="kleinunternehmer">
+                    <h2>Umsatzsteuer</h2>
+                    <p>Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.</p>
+                </div>
+
+                <div class="section-block">
+                    <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+                    <p>{{legal.name}}, Anschrift wie oben</p>
+                </div>
+
+                <div class="section-block">
+                    <h2>Verbraucherstreitbeilegung</h2>
+                    <p>Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+                </div>
+
+                <div class="mt-10 pt-6">
+                    <a href="/" class="inline-flex items-center gap-2 text-sm font-bold text-gray-700 hover:text-brand transition">
+                        <i class="ph ph-arrow-left"></i>
+                        Zurück zur Startseite
+                    </a>
+                </div>
+
+                </div>
+
+                <!-- ================= ENGLISH ================= -->
+                <div data-lang="en">
+
+                <div class="section-block">
+                    <h2>Information pursuant to § 5 DDG</h2>
+                    <p><strong>Click-Capybara</strong><br>
+                    Owner: {{legal.name}}<br>
+                    {{legal.street}}<br>
+                    {{legal.zip_city}}<br>
+                    Germany</p>
+                </div>
+
+                <div class="section-block">
+                    <h2>Contact</h2>
+                    <p>Email: <a href="mailto:hello@click-capybara.com">hello@click-capybara.com</a><br>
+                    <span data-if="phone">Phone: {{legal.phone}}<br></span>
+                    Contact form: <a href="/#contact">click-capybara.com/#contact</a></p>
+                </div>
+
+                <div class="section-block" data-if="vat_id">
+                    <h2>VAT ID</h2>
+                    <p>VAT identification number pursuant to § 27a UStG: {{legal.vat_id}}</p>
+                </div>
+
+                <div class="section-block" data-if="kleinunternehmer">
+                    <h2>VAT</h2>
+                    <p>No VAT is charged pursuant to § 19 UStG (small business regulation).</p>
+                </div>
+
+                <div class="section-block">
+                    <h2>Responsible for content under § 18(2) MStV</h2>
+                    <p>{{legal.name}}, address as above</p>
+                </div>
+
+                <div class="section-block">
+                    <h2>Consumer dispute resolution</h2>
+                    <p>We are neither willing nor obliged to take part in dispute resolution proceedings before a consumer arbitration board.</p>
+                </div>
+
+                <div class="mt-10 pt-6">
+                    <a href="/" class="inline-flex items-center gap-2 text-sm font-bold text-gray-700 hover:text-brand transition">
+                        <i class="ph ph-arrow-left"></i>
+                        Back to Home
+                    </a>
+                </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+{{> footer}}
+</div>
+</body></html>

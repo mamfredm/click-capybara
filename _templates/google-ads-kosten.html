@@ -1,0 +1,89 @@
+<!DOCTYPE html><html lang="de"><head>
+{{> head}}
+</head>
+<body>
+<div style="background: #12110d; color: #f4f0e6; font-family: 'Space Grotesk', system-ui, sans-serif; overflow: hidden">
+{{> header}}
+<main id="main">
+<section style="max-width: 1200px; margin: 0 auto; padding: 64px 32px 56px">
+<div style="display: flex; flex-direction: column; gap: 24px; align-items: flex-start; max-width: 860px">
+<h1 class="p-up" style="margin: 0; display: flex; flex-direction: column; gap: 24px">
+<span style="font: 400 15px/1.5 'JetBrains Mono', ui-monospace, monospace; color: #a8a293">Google Ads Kosten berechnen</span>
+<span style="font: 700 clamp(44px, 6vw, 88px)/0.98 'Space Grotesk', system-ui, sans-serif; letter-spacing: -0.04em">Was darf ein Klick <span class="p-mark">kosten?</span></span>
+</h1>
+<p class="p-up" style="animation-delay: .15s; margin: 0; max-width: 620px; font-size: 19px; line-height: 1.55; color: #d6d1c4">Google Ads kostet so viel, wie du pro Klick zahlst. Ob sich das rechnet, entscheidet dein Deckungsbeitrag. Trag deine Zahlen ein und sieh, ab welchem Klickpreis du draufzahlst.</p>
+</div>
+</section>
+<section style="max-width: 1200px; margin: 0 auto; padding: 0 32px 96px">
+{{> db-calc}}
+</section>
+<section style="max-width: 1200px; margin: 0 auto; padding: 0 32px 96px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 40px">
+<h2 style="margin: 0; max-width: 720px; font: 700 clamp(32px, 4vw, 54px)/1.05 'Space Grotesk', system-ui, sans-serif; letter-spacing: -0.03em">So rechnet der Rechner</h2>
+<p style="margin: 0; max-width: 340px; font-size: 16px; line-height: 1.5; color: #d6d1c4">Drei Formeln, mehr steckt nicht dahinter.</p>
+</div><div style="border-top: 2px solid #f4f0e6; display: flex; flex-direction: column">
+<div class="p-row" style="display: flex; flex-wrap: wrap; gap: 12px 40px; padding: 30px 0; border-bottom: 1px solid #4a4538">
+<span style="flex: 0 0 48px; font: 500 14px 'JetBrains Mono', ui-monospace, monospace; color: #fcba01; padding-top: 8px">01</span>
+<div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 10px">
+<h3 style="margin: 0; font: 700 clamp(22px, 2.6vw, 30px)/1.15 'Space Grotesk', system-ui, sans-serif; letter-spacing: -0.02em">Deckungsbeitrag</h3>
+<span style="font: 400 14px/1.5 'JetBrains Mono', ui-monospace, monospace; color: #fcba01">Auftragswert − variable Kosten</span>
+</div>
+<p style="flex: 1 1 340px; margin: 0; font-size: 16px; line-height: 1.55; color: #d6d1c4; padding-top: 6px">Was von einem Auftrag übrig bleibt, bevor Werbung und Fixkosten bezahlt sind. Mehr als diesen Betrag darf ein Auftrag an Werbung nicht kosten.</p>
+</div>
+<div class="p-row" style="display: flex; flex-wrap: wrap; gap: 12px 40px; padding: 30px 0; border-bottom: 1px solid #4a4538">
+<span style="flex: 0 0 48px; font: 500 14px 'JetBrains Mono', ui-monospace, monospace; color: #fcba01; padding-top: 8px">02</span>
+<div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 10px">
+<h3 style="margin: 0; font: 700 clamp(22px, 2.6vw, 30px)/1.15 'Space Grotesk', system-ui, sans-serif; letter-spacing: -0.02em">Maximaler Klickpreis</h3>
+<span style="font: 400 14px/1.5 'JetBrains Mono', ui-monospace, monospace; color: #fcba01">Deckungsbeitrag × Conversion-Rate</span>
+</div>
+<p style="flex: 1 1 340px; margin: 0; font-size: 16px; line-height: 1.55; color: #d6d1c4; padding-top: 6px">Führen 2 von 100 Klicks zu einem Auftrag, darf ein Klick höchstens 2 Prozent des Deckungsbeitrags kosten. Bei Dienstleistungen kommt die Abschlussquote dazu.</p>
+</div>
+<div class="p-row" style="display: flex; flex-wrap: wrap; gap: 12px 40px; padding: 30px 0; border-bottom: 1px solid #4a4538">
+<span style="flex: 0 0 48px; font: 500 14px 'JetBrains Mono', ui-monospace, monospace; color: #fcba01; padding-top: 8px">03</span>
+<div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 10px">
+<h3 style="margin: 0; font: 700 clamp(22px, 2.6vw, 30px)/1.15 'Space Grotesk', system-ui, sans-serif; letter-spacing: -0.02em">Break-even-ROAS</h3>
+<span style="font: 400 14px/1.5 'JetBrains Mono', ui-monospace, monospace; color: #fcba01">Auftragswert ÷ Deckungsbeitrag</span>
+</div>
+<p style="flex: 1 1 340px; margin: 0; font-size: 16px; line-height: 1.55; color: #d6d1c4; padding-top: 6px">So viel Umsatz muss jeder Werbe-Euro bringen, damit du bei null herauskommst. Alles darüber ist Gewinn vor Fixkosten.</p>
+</div>
+</div>
+</section>
+<section style="max-width: 1200px; margin: 0 auto; padding: 0 32px 96px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 40px">
+<h2 style="margin: 0; max-width: 720px; font: 700 clamp(32px, 4vw, 54px)/1.05 'Space Grotesk', system-ui, sans-serif; letter-spacing: -0.03em">Wovon die Kosten abhängen</h2>
+<p style="margin: 0; max-width: 340px; font-size: 16px; line-height: 1.5; color: #d6d1c4">Google gibt kein Mindestbudget vor. Diese drei Größen bestimmen, was du zahlst.</p>
+</div><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 32px 40px">
+<div style="display: flex; flex-direction: column; gap: 14px; border-top: 2px solid #fcba01; padding-top: 22px">
+<span style="font: 500 14px 'JetBrains Mono', ui-monospace, monospace; color: #fcba01">Der Markt</span>
+<h3 style="margin: 0; font: 700 26px/1.15 'Space Grotesk', system-ui, sans-serif; letter-spacing: -0.02em">Klickpreis</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #d6d1c4">Jede Suche ist eine Auktion. Je mehr Mitbewerber auf denselben Suchbegriff bieten, desto teurer der Klick. Gute Anzeigen und passende Zielseiten senken den Preis.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px; border-top: 2px solid #fcba01; padding-top: 22px">
+<span style="font: 500 14px 'JetBrains Mono', ui-monospace, monospace; color: #fcba01">Deine Website</span>
+<h3 style="margin: 0; font: 700 26px/1.15 'Space Grotesk', system-ui, sans-serif; letter-spacing: -0.02em">Conversion-Rate</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #d6d1c4">Wie viele Besucher kaufen oder anfragen. Verdoppelt sich die Rate, darf der Klick doppelt so viel kosten. Oft ist das der größte Hebel.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px; border-top: 2px solid #fcba01; padding-top: 22px">
+<span style="font: 500 14px 'JetBrains Mono', ui-monospace, monospace; color: #fcba01">Dein Geschäft</span>
+<h3 style="margin: 0; font: 700 26px/1.15 'Space Grotesk', system-ui, sans-serif; letter-spacing: -0.02em">Deckungsbeitrag</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #d6d1c4">Was pro Auftrag übrig bleibt. Wer nur auf den Umsatz schaut, bezahlt schnell mehr für einen Auftrag, als er daran verdient.</p>
+</div>
+</div>
+</section>
+<section style="max-width: 1200px; margin: 0 auto; padding: 0 32px 96px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 40px">
+<h2 style="margin: 0; max-width: 720px; font: 700 clamp(32px, 4vw, 54px)/1.05 'Space Grotesk', system-ui, sans-serif; letter-spacing: -0.03em">Häufige Fragen</h2>
+<p style="margin: 0; max-width: 340px; font-size: 16px; line-height: 1.5; color: #d6d1c4">Kurz beantwortet.</p>
+</div><div class="db-faqs">
+<details class="db-faq"><summary>Gibt es bei Google Ads ein Mindestbudget?</summary><p>Nein. Du legst ein Tagesbudget fest und kannst es jederzeit ändern oder pausieren. Ob ein Budget reicht, hängt davon ab, wie viele Klicks du dir zu deinem Klickpreis leisten kannst.</p></details>
+<details class="db-faq"><summary>Zahle ich pro Klick oder pro Einblendung?</summary><p>In Suchkampagnen zahlst du in der Regel pro Klick. Dass deine Anzeige erscheint, kostet allein noch nichts.</p></details>
+<details class="db-faq"><summary>Was kostet die Betreuung zusätzlich?</summary><p>Paket S mit 5 Stunden kostet 395 € im Monat, Paket M mit 10 Stunden 790 €, Paket L ab 950 €. Das sind Angebotspreise bis 01.03.2027. Dein Werbebudget zahlst du direkt an Google.</p></details>
+<details class="db-faq"><summary>Was ist ein guter ROAS?</summary><p>Einer, der über deinem Break-even-ROAS liegt. Ein Shop mit hoher Marge verdient schon bei 200 Prozent, einer mit kleiner Marge braucht 600 Prozent und mehr. Deshalb rechnet dieser Rechner mit deinem Deckungsbeitrag.</p></details>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px 32px; margin-top: 28px"><a href="/fallbeispiel-onlineshop.html" style="font-weight: 500; font-size: 16px; color: #fcba01; padding: 12px 0">Fallbeispiel: ein Onlineshop, ein Jahr →</a><a href="/google-ads.html" style="font-weight: 500; font-size: 16px; color: #fcba01; padding: 12px 0">Google Ads Betreuung ansehen →</a><a href="/preise.html#google-ads" style="font-weight: 500; font-size: 16px; color: #fcba01; padding: 12px 0">Alle Preise ansehen →</a></div>
+</section>
+{{> contact title="Rechnet es sich bei dir? Ich schaue drauf. Kostenlos." text="Schick mir deine Zahlen aus dem Rechner. Ich sage dir, wo ich ansetzen würde und ob Google Ads für dich der richtige Kanal ist." service="Google Ads"}}
+</main>
+{{> footer}}
+</div>
+</body></html>
